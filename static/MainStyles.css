@@ -1,0 +1,466 @@
+/* MISC CONTENT */
+
+body{
+  margin: 0;
+  width: 100vw;
+  right: 0;
+    --bgcolor: #fffeff;
+  height: 100vh;
+  background-color: var(--bgcolor);
+  position: absolute;
+}
+
+svg{
+  position: absolute;
+margin-top: -99px;
+width: 100%;
+z-index: 2;
+height: 100px;
+fill: var(--bgcolor);
+display: none;
+}
+
+iframe{
+  display: flex;
+  height: 95%;
+  border: none;
+  position: fixed;
+  margin: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.loadingGif{
+  height: 20vh;
+      padding-left: 40vw;
+      width: 20vw;
+      padding-top: 40vh;
+}
+/* ANIMATION KEYFRAMES */
+
+@keyframes fade-in {
+  0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade-in-half {
+  0%   { opacity: 0; }
+    100% { opacity: 0.2; }
+}
+
+@keyframes slide-in {
+  0%   { height: 0px; }
+    100% { height: 500px; }
+}
+
+@keyframes arrow{
+  0% {clip-path: polygon(0px 0px, 0px -100px, 50% 00px, 100% -100px, 100% 0%);}
+  100% {clip-path: polygon(0px 0px, 0px 400px, 50% 500px, 100% 400px, 100% 0%);}
+}
+
+@keyframes slide-in-content {
+  0%   { height: 0px; }
+    100% { height: 701px; }
+}
+
+/* BANNERS */
+
+.banner {
+  animation: slide-in 3s forwards 0.5s;
+  width: 100%;
+  overflow: hidden;
+  height: 0px;
+  z-index: 10;
+  opacity: 1;
+  left: 0;
+  position: relative;
+  background: linear-gradient(180deg, rgba(0,101,142,1) 0%, rgba(42,155,255,1) 59%, rgba(95,228,255,1) 100%);
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+}
+
+.banner::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("/static/skills.jpeg");
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%) brightness(70%);
+  opacity: 0.2;
+}
+
+.bannerWrapper{
+  animation: arrow 3s forwards 0.5s;
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  clip-path: polygon(0px 0px, 0px 400px, 50% 500px, 100% 400px, 100% 0%);
+}
+
+.bannerWrapper h1{
+  font-size: 80px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin-top: 130px;
+  position: absolute;
+    z-index: 5;
+  width: 100vw;
+  color: white;
+}
+
+
+.bannerContent{
+  opacity: 0;
+  z-index: 30;
+  position: absolute;
+  animation: fade-in 3s forwards 1s;
+}
+
+.bannerWrapper p{
+  font-size: 26px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin-top: 270px;
+  position: absolute;
+    z-index: 5;
+  width: 100vw;
+  color: white;
+}
+
+.contentHover{
+  background-color: white;
+  width: 30%;
+  margin-left: 3%;
+  margin-right: 3%;
+  z-index: 3;
+  height: 500px;
+  display: inline-block;
+  -webkit-box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+}
+
+
+.content{
+  margin-top: -70px;
+  width: 100vw;
+  height: auto;
+}
+
+/* HEADERS */
+
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+.headerWrapper{
+  background: none;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+  margin: 0;
+  z-index: 50;
+  height: 50px;
+  animation: fade-in 3s forwards 1s;
+  opacity: 0;
+  padding: 0;
+
+  width: 100vw;
+}
+
+
+.headerWrapper p{
+  text-align: center;
+  float: right;
+  color: white;
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 20px;
+  margin-bottom: 0;
+  margin-top: 11px;
+}
+
+.headerWrapper p:hover{
+  border-bottom: 2px solid white;
+}
+
+.headerWrapper a{
+  height: 50px;
+  width: auto;
+}
+
+.headerButton{
+  margin-top: 16px;
+  padding: 2px 5px 2px 5px;
+  border-radius: 20%;
+  color: white !important;
+  background-color: #2291EA;
+  border: none !important;
+}
+
+.headerButton:hover{
+  filter: brightness(120%);
+}
+
+.headerWrapper img{
+  filter: brightness(10000%);
+  height: 31px;
+  margin-top: 11px;
+  margin-left: 30px;
+  width: auto;
+  float: left;
+  display: inline-block;
+}
+
+.headerOnScroll{
+  transition: 0.5s ease-in-out;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+}
+
+.headerOnScroll p:hover{
+  border-bottom: 2px solid #2d92ff;
+}
+.headerOnScroll p{
+  transition: 0.5s ease-in-out;
+  color: grey;
+}
+
+.headerOnScroll img{
+  filter: brightness(100%);
+}
+
+.courseHeader{
+  position:static;
+  --bgcolor: #FFFFFF;
+}
+
+/* CONTENT */
+
+.content{
+  height: 701px;
+  width: 100vw;
+  top: 400px; left: 0;
+  opacity: 1;
+  z-index: 5;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.content::before{
+  z-index: -10;
+  content: "";
+  position: absolute;
+ left: 0;
+  width: 100%; height: 700px;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%) brightness(150%) sepia(100%) hue-rotate(200deg) opacity(20%);
+}
+
+.contentGreen{
+      background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 59%, rgb(255, 255, 255) 100%);
+  clip-path: polygon(0px 0px, 0px 600px, 50% 700px, 100% 600px, 100% 0%);
+}
+.contentGreen::before{
+  background-image: url("/static/car3.jpg");
+}
+.containerGreen h1{
+  margin-top: 0px;
+}
+.contentRed{
+  top: 340px; z-index: 4; background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 59%, rgb(255, 255, 255) 100%);
+}
+.contentBottom{
+  top: 270px; z-index: 3; background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(151,60,25,1) 59%, rgba(106,59,39,1) 100%);
+  clip-path: polygon(0px 0px, 0px 600px, 50% 700px, 100% 600px, 100% 0%);
+  height: 500px;
+}
+.contentRed::before{
+  background-image: url("/static/people.jpg");
+}
+
+.containerGreen{
+  opacity: 1;
+  color: #6c6c6c;
+  padding: 15%;
+  padding-left: 7%;
+}
+.containerRed{
+  opacity: 1;
+  color: #6c6c6c;
+  padding: 10%;
+  text-align: right;
+}
+
+.containerRed p{
+  padding-left: 40%;
+}
+
+.containerGreen p{
+  padding-right: 40%;
+}
+
+.container h1{
+  font-size: 80px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container p{
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-height: 750px) {
+  .bannerWrapper h1{
+    font-size: 80px;
+    margin-top: 110px;
+  }
+  @keyframes slide-in {
+    0%   { height: 0px; }
+      100% { height: 500px; }
+  }
+
+  .containerGreen h1{
+    margin-top: 30px;
+  }
+  .bannerContent{
+    opacity: 0;
+    animation: fade-in 3s forwards 1s;
+  }
+
+  .headerWrapper p{
+    margin-top: 12px;
+  }
+
+  .headerButton{
+    margin-top: 10px !important;
+  }
+
+  .headerWrapper img{
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .bannerWrapper p{
+    font-size: 22px;
+    margin-top: 240px;
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  svg{
+    display: none;
+  }
+
+  .bannerWrapper{
+    clip-path: none;
+  }
+
+  .banner{
+    animation-duration: 0s;
+  }
+
+  @keyframes slide-in {
+    0%   { height: 0vh; }
+      100% { height: 100vh; }
+  }
+  @keyframes arrow{
+    0% {clip-path: none;}
+    100% {clip-path: none;}
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .bannerContent h1{
+    font-size: 60px;
+  }
+  .container h1{
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .containerRed{
+    padding-top: 20%;
+  }
+
+  .container p{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .bannerWrapper h1{
+    font-size: 40px;
+  }
+  .bannerContent{
+    width: 90%;
+    height: 100%
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .bannerWrapper p{
+    font-size: 15px;
+    margin-top: 250px;
+  }
+
+  .container h1{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .container p{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .containerRed{
+    padding-top: 30%;
+  }
+
+  .contentGreen{
+    clip-path: none;
+    top: 0;
+  }
+
+  .contentRed{
+    clip-path: none;
+    top: 0;
+  }
+
+  .bannerWrapper{
+    clip-path: none;
+    height: 100vh;
+    position: static;
+  }
+  .banner{
+    animation-duration: 0s;
+  }
+
+  @keyframes slide-in {
+    0%   { height: 0vh; }
+      100% { height: 100vh; }
+  }
+
+  @keyframes arrow{
+    0% {clip-path: none;}
+    100% {clip-path: none;}
+  }
+
+
+
+}
