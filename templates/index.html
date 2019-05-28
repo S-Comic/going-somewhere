@@ -1,33 +1,51 @@
-<!doctype html>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+<title>oing somewhere?</title>
+<script>
 
-{% include 'modules/fonts.html' %}
-{% include 'modules/header.html' %}
+  $(function() {
+      $(window).on("scroll", function() {
+          if($(window).scrollTop() > 200) {
+              $(".headerWrapper").addClass("onScroll");
+              $(".logo").addClass("logoScroll");
+          } else {
+              //remove the background property so it comes transparent again (defined in your css)
+             $(".headerWrapper").removeClass("onScroll");
+             $(".logo").removeClass("logoScroll");
+          }
+      });
+  });
+</script>
 
+{% include 'modules/sectionLinks.html' %}
+{% include 'modules/sectionHeader.html' %}
 
 <div class = "bannerWrapper">
   <div class = "bannerContent">
-  <h1>Going somewhere?</h1>
-  <p>Welcome to your free resource for driving education</p>
+  <div class = "titleContainer">
+      <h1>Going somewhere?</h1>
+      <h3>Our driving theory resources are completely free and vital for any new drivers. Click 'learn' to begin your driving journey.</h3>
   </div>
-<div class = "banner">
-</div>
-</div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-  <polygon points="0,0 0,100 55,100"></polygon>
-    <polygon points="100,100 100,0 45,100"></polygon>
-</svg>
-
-<div class = "content contentGreen">
-  <div class = "container containerGreen">
-  <h1>Taking you places</h1>
-  <p>We give you the push you need to get on the road. Free theory courses and hazard perception tests are just the start of what we plan to offer.</p>
+  <div class='icon-scroll'></div>
   </div>
 </div>
 
-<div class = "content contentRed">
-  <div class = "container containerRed">
-  <h1>Keeping you on track</h1>
-  <p>Our courses have been created with help from professional driving instructors to ensure that we only teach the most accurate theory.
-  Press the 'Learn' button to begin the course.</p>
-  </div>
+<div class = "contentWrapper">
+ <div class = "sectionOne">
+   <h2>We help you get on the road</h2>
+   <p>We provide resources so that you don't ever feel like you don't have the skill or 'drive' to get on the road. Our courses are designed to ensure a first-time pass of
+     your theory test, so that you're driving safely and efficiently.</p>
+</div>
+
+<div class = "sectionTwo">
+  <h2>Need us to take the wheel?</h2>
+  <p>If you're a new driver looking to learn the ropes, or someone more experienced wanting to freshen up on your knowledge, we can provide the courses you need to get on the road. </p>
+</div>
+
+<div class = "footer">
+<p>Sitemap | Privacy policy</p>
+</div>
+</div>
+
+
 </div>
